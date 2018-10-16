@@ -1,0 +1,5 @@
+rootProject.name = 'microservices'
+
+include 'catalog-service'
+include 'config-server'
+
