@@ -1,0 +1,6 @@
+spring.application.name = catalog-service
+server.port=8181
+
+spring.data.mongodb.uri = mongodb://localhost:27017/micro-serviceDB?connection-per-host=100
+
+management.endpoints.web.exposure.include=*
