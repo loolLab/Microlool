@@ -43,6 +43,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-client
     compile group: 'org.springframework.cloud', name: 'spring-cloud-config-client', version: '2.0.1.RELEASE'
 
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bus-amqp
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-bus-amqp', version: '2.0.0.RELEASE'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

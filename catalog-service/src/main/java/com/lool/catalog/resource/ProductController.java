@@ -41,4 +41,12 @@ public class ProductController {
     }
 
 
+    @Value("${message:Hello default}")
+    private String message;
+
+    @RequestMapping("/message")
+    String getMessage() {
+        return this.message;
+    }
+
 }
