@@ -3,6 +3,7 @@ package com.lool.catalog.resource;
 import com.lool.catalog.RuntimeException.ProductNotFoundException;
 import com.lool.catalog.service.ProductService;
 import com.lool.catalog.domain.Product;
+import com.lool.catalog.util.ProductInventoryDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -25,8 +26,9 @@ public class ProductController {
     public List<Product> allProducts() {
         return productService.findAllProducts();
     }
+
     @GetMapping("/{code}")
-    public Product productByCode(@PathVariable String code) {
+    public ProductInventoryDto productByCode(@PathVariable String code) {
         return productService.findProductByCode(code)
                 .orElseThrow(() -> new ProductNotFoundException("Product with code ["+code+"] doesn't exist"));
     }
