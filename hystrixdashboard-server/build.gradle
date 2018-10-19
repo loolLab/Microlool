@@ -11,7 +11,7 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
-    
+
 }
 
 apply plugin: 'java'
@@ -25,7 +25,7 @@ repositories {
 }
 
 jar{
-    baseName = 'catalog-service'
+    baseName = 'hystrixdashboard-server'
     version = '0.1'
 }
 
@@ -49,9 +49,9 @@ dependencies {
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.0.1.RELEASE'
 
-    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-hystrix
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix', version: '1.4.6.RELEASE'
-    
+// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-hystrix-dashboard
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard', version: '1.4.6.RELEASE'
+
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

@@ -5,4 +5,5 @@ include 'config-server'
 include 'order-service'
 include 'eureka-server'
 include 'inventory-service'
+include 'hystrixdashboard-server'
 
